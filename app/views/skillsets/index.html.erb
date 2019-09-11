@@ -1,1 +1,22 @@
 <h1 class="center">List of Skillsets</h1>
+<%= form_tag skillsets_path, method: "get" do %>
+    <%= text_field_tag :query %>
+    <%= submit_tag :search, class: "btn purple darken-1" %>
+  <% end %>
+  
+  <table class="striped">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <% @skillsets.each do |skillset| %>
+      <tr>
+        <td><%= link_to skillset.title, skillset_path(skillset) %></td>
+        <td><%= link_to "Edit", edit_skillset_path(skillset) %></td>
+        <td><%= link_to "Delete", skillset_path(skillset), method: "delete" %></td>
+      </tr>
+    <% end %>
+  </table>

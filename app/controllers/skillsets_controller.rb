@@ -1,6 +1,6 @@
 class SkillsetsController < ApplicationController
     def index
-
+        @skillsets = Skillset.all
     end
   
     def new

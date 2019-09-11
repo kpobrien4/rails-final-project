@@ -1,2 +1,24 @@
-<h1>Projects#edit</h1>
-<p>Find me in app/views/projects/edit.html.erb</p>
+<h3>Edit your Project</h3>
+<%= form_for @project do |f| %>
+    <div class="input-field">
+      <%= f.text_field :title %>
+      <%= f.label :title %>
+    </div>
+
+    <div class="input-field">
+      <%= f.text_field :genre %>
+      <%= f.label :genre %>
+    </div>
+
+    <div class="input-field">
+        <%= f.text_field :contact %>
+        <%= f.label :contact %>
+     </div>
+  
+    <div class="input-field">
+      <%= f.text_area :info, class: "materialize-textarea" %>
+      <%= f.label :info %>
+    </div>
+  
+    <%= f.submit "Submit", class: "btn purple darken-1" %>
+  <% end %>

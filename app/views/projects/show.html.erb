@@ -1,2 +1,5 @@
-<h1>Projects#show</h1>
-<p>Find me in app/views/projects/show.html.erb</p>
+<h3><%= @project.title %></h3>
+<h5>Posted on <%= @project.created_at.strftime("%B %d, %Y") %></h5>
+<h5>Genre: <%= @project.genre %></h2>
+<h5>Contact: <%= @project.contact %></h2>
+<p>More info: <%= @project.info %></p>
