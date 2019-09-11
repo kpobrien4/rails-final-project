@@ -5,6 +5,7 @@ class CreateSkillsets < ActiveRecord::Migration[5.2]
       t.string :skills
       t.text :info
       t.string :contact
+      t.integer :user_id
 
       t.timestamps
     end
