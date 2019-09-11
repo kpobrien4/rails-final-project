@@ -1,4 +1,4 @@
 class ProjectSkillset < ApplicationRecord
     belongs_to :project 
-    belongs to :skillset
+    belongs_to :skillset
 end
