@@ -2,11 +2,7 @@ class ProjectsController < ApplicationController
   before_action :set_project, except: [:index, :new, :create]
 
   def index
-    if params[:query]
-      @projects = Project.where("title LIKE ?", "%#{params[:query]}%")
-    else
-      @projects = Project.all
-    end
+    @projects = Project.search(params[:query])
   end
 
   def new
@@ -14,12 +10,12 @@ class ProjectsController < ApplicationController
   end
   
   def create
-    project = Project.new(project_params)
-    if project.save
-      redirect_to projects_path
+    @project = Project.new(project_params)
+    if @project.save
       flash[:notify] = "Project successfully created"
+      redirect_to projects_path
     else
-      flash[:notify] = project.errors.full_messages
+      flash[:notify] = @project.errors.full_messages
       render :new
     end
   end

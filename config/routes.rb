@@ -4,12 +4,17 @@ Rails.application.routes.draw do
 
   root to: 'home#index'
 
-  get '/login', to: 'sessions#login', as: 'login'
-  post '/login', to: 'sessions#post_login'
+  get '/login', to: 'sessions#new', as: 'login'
+  post '/login', to: 'sessions#create'
 
-  get '/signup', to: 'sessions#signup', as: 'signup'
-  post '/signup', to: 'sessions#post_signup'
+  delete '/logout', to: 'sessions#destroy', as: 'delete_user_session'
 
-  delete '/logout', to: 'sessions#logout', as: 'destroy_session'
+  get '/signup', to: 'users#new', as: 'signup'
+  post '/signup', to: 'users#create'
+
+  resources :users, only: [] do
+    resources :projects
+  end
+
 
 end

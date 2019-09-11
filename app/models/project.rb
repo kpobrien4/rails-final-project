@@ -6,4 +6,6 @@ class Project < ApplicationRecord
     validates :genre, presence: true
     validates :info, presence: true
     validates :contact, presence: true
+
+    scope :search, -> (query) { query ? Project.where("title LIKE ?", "%#{query}%") : Project.all }
 end

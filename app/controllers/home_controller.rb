@@ -1,5 +1,7 @@
 class HomeController < ApplicationController
+    layout 'home_layout'
+    before_action :redirect_if_signed_in
     def index
-        @user = current_user if is_logged_in?
+
     end
 end
