@@ -16,6 +16,9 @@ Rails.application.routes.draw do
     resources :projects
   end
 
+  resources :users, only: [] do
+    resources :skillsets
+  end
 
   get '/auth/facebook/callback' => 'sessions#create'
 

@@ -4,19 +4,14 @@
     <%= submit_tag :search, class: "btn blue-grey lighten-1" %>
   <% end %>
   
-  <table class="striped">
+  <table>
     <thead>
       <tr>
-        <th>Title</th>
-        <th>Edit</th>
-        <th>Delete</th>
+        <th>Name</th>
+        <th>Skills</th>
+        <th></th>
+        <th></th>
       </tr>
     </thead>
-    <% @skillsets.each do |skillset| %>
-      <tr>
-        <td><%= link_to skillset.title, skillset_path(skillset) %></td>
-        <td><%= link_to "Edit", edit_skillset_path(skillset) %></td>
-        <td><%= link_to "Delete", skillset_path(skillset), method: "delete" %></td>
-      </tr>
-    <% end %>
+    <%= render @skillsets %>
   </table>

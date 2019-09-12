@@ -1,0 +1,6 @@
+<tr>
+    <td><%= link_to skillset.name, skillset_path(skillset) %></td>
+    <td><%= skillset.skills %></td>
+    <td><%= link_to "Edit", edit_skillset_path(skillset) %></td>
+    <td><%= link_to "Delete", skillset_path(skillset), method: "delete" %></td>
+</tr>

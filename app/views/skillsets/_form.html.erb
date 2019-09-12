@@ -1,0 +1,30 @@
+<ul>
+    <%if !@skillset.errors.empty? %>
+      <%@skillset.errors.full_messages.each do |msg|%>
+         <li class="red-text"><%= msg %></li>
+        <%end%>
+      <%end%>
+</ul>
+<%= form_for [user, skillset] do |f| %>
+    <div class="input-field">
+      <%= f.text_field :name %>
+      <%= f.label :name %>
+    </div>
+
+    <div class="input-field">
+      <%= f.text_field :skills %>
+      <%= f.label :skills %>
+    </div>
+
+    <div class="input-field">
+        <%= f.text_field :contact %>
+        <%= f.label :contact %>
+     </div>
+  
+    <div class="input-field">
+      <%= f.text_area :info, class: "materialize-textarea" %>
+      <%= f.label :info %>
+    </div>
+  
+    <%= f.submit button_name, class: "btn blue-grey lighten-1" %>
+  <% end %>
