@@ -5,7 +5,7 @@
         <%end%>
       <%end%>
 </ul>
-<%= form_for project do |f| %>
+<%= form_for [user, project] do |f| %>
     <div class="input-field">
       <%= f.text_field :title %>
       <%= f.label :title %>

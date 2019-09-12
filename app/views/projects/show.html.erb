@@ -1,5 +1,8 @@
-<h3><%= @project.title %></h3>
-<h5>Posted on <%= @project.created_at.strftime("%B %d, %Y") %></h5>
-<h5>Genre: <%= @project.genre %></h2>
-<h5>Contact: <%= @project.contact %></h2>
-<p>More info: <%= @project.info %></p>
+<h3><b><%= @project.title %></b></h3>
+<font size="2"> <%= @project.created_at.strftime("%B %d, %Y") %></font><br><br>
+<div class="card-panel  blue-grey darken-1 blue-grey-text text-lighten-5">
+<h5>Genre: <%= @project.genre %></h2><br>
+<font size="3">More info: <%= @project.info %></font><br><br>
+</div>
+<font size="2">Created by: <%= @project.user.get_email %></font><br>
+<font size="2">Contact: <%= @project.contact %></font><br>

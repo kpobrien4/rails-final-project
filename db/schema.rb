@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_11_153900) do
+ActiveRecord::Schema.define(version: 2019_09_12_175137) do
 
   create_table "project_skillsets", force: :cascade do |t|
     t.integer "project_id"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 2019_09_11_153900) do
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "username"
   end
 
 end

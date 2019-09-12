@@ -12,7 +12,7 @@ class ProjectsController < ApplicationController
   end
   
   def create
-    @project = Project.new(project_params)
+    @project = @user.projects.build(project_params)
     if @project.save
       flash[:notify] = "Project successfully created"
       redirect_to projects_path
@@ -52,6 +52,6 @@ class ProjectsController < ApplicationController
     end
 
     def project_params
-      params.require(:project).permit(:title, :genre, :info, :contact)
+      params.require(:project).permit(:title, :genre, :info, :contact, :user_id)
     end
 end
