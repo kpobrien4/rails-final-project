@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+  before_action :redirect_if_not_signed_in
+  before_action :set_user
   before_action :set_project, except: [:index, :new, :create]
 
   def index
@@ -40,6 +42,10 @@ class ProjectsController < ApplicationController
   end
 
   private
+
+    def set_user
+      @user = User.find_by_id(params[:user_id])
+    end
 
     def set_project
       @project = Project.find_by_id(params[:id])

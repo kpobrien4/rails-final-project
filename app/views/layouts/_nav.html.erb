@@ -4,7 +4,7 @@
     <ul class="right">
       <% if is_logged_in? %>
         <li><%= link_to "New Project", new_user_project_path(current_user) %></li>
-        <li><%= link_to "Project List", user_projects_path(current_user) %></li>
+        <li><%= link_to "Project List", projects_path %></li>
         <li><%= link_to "New Skillset", new_skillset_path %></li>
         <li><%= link_to "Skillset List", skillsets_path %></li>
         <li><%= link_to "Logout", delete_user_session_path, method: 'delete' 
