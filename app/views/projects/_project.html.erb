@@ -1,6 +1,6 @@
 <tr>
     <td><%= link_to project.title, project_path(project) %></td>
     <td><%= project.genre %></td>
-    <td><%= link_to "Edit", edit_project_path(project) %></td>
+    <td><%= link_to "Edit", edit_user_project_path(current_user, project) %></td>
     <td><%= link_to "Delete", project_path(project), method: "delete" %></td>
 </tr>

@@ -1,5 +1,5 @@
 <h1 class="center">List of Projects</h1>
-<%= form_tag projects_path, method: "get" do %>
+<%= form_tag user_projects_path(current_user), method: "get" do %>
     <%= text_field_tag :query %>
     <%= submit_tag :search, class: "btn blue-grey lighten-1" %>
   <% end %>

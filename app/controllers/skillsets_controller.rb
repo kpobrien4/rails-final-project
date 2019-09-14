@@ -26,6 +26,7 @@ class SkillsetsController < ApplicationController
     end
   
     def edit
+      redirect_to skillsets_path unless current_user == @skillset.user
     end
   
     def update
@@ -37,7 +38,9 @@ class SkillsetsController < ApplicationController
     end
   
     def destroy
+      if current_user == @skillset.user
       @skillset.destroy
+      end
       redirect_to skillsets_path
     end
   

@@ -26,7 +26,7 @@ class ProjectsController < ApplicationController
   end
 
   def edit
-    redirect_to projects_path unless current_user == @user
+    redirect_to projects_path unless current_user == @project.user
   end
 
   def update
@@ -38,7 +38,9 @@ class ProjectsController < ApplicationController
   end
 
   def destroy
+    if current_user == @project.user
     @project.destroy
+    end
     redirect_to projects_path
   end
 
