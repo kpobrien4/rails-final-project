@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_12_185317) do
+ActiveRecord::Schema.define(version: 2019_09_14_160604) do
 
   create_table "project_skillsets", force: :cascade do |t|
     t.integer "project_id"
     t.integer "skillset_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "quantity"
   end
 
   create_table "projects", force: :cascade do |t|

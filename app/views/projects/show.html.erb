@@ -5,4 +5,7 @@
 <font size="3">More info: <%= @project.info %></font><br><br>
 </div>
 <font size="3">Created by user: <%= link_to @project.user.get_email, user_skillsets_path(@project.user_id) %></font><br>
-<font size="3">Contact: <%= @project.contact %></font><br>
+<font size="3">Contact: <%= @project.contact %></font><br><br><br>
+<%= form_tag user_skillsets_path(current_user), method: "get" do %>
+    <%= submit_tag "Pair a Skillset", class: "btn blue-grey darken-1" %>
+  <% end %>
