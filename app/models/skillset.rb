@@ -1,5 +1,5 @@
 class Skillset < ApplicationRecord
-    belongs_to :user, optional: true
+    belongs_to :user
     has_many :project_skillsets
     has_many :projects, through: :project_skillsets
 
@@ -8,5 +8,14 @@ class Skillset < ApplicationRecord
     validates :info, presence: true
     validates :contact, presence: true
 
-    scope :search, -> (query) { query ? Skillset.where("skills LIKE ?", "%#{query}%") : Skillset.all }
+   # scope :search, -> (query) { query ? Skillset.where("skills LIKE ?", "%#{query}%") : Skillset.all }
+
+    def self.search(query, user_id)
+        if user_id
+            user = User.find_by_id(user_id)
+            query ? user.skillsets.where("skills LIKE ?", "%#{query}%") : user.skillsets 
+        else
+            query ? Skillset.where("skills LIKE ?", "%#{query}%") : Skillset.all
+        end
+    end
 end

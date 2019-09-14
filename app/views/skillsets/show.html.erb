@@ -1,7 +1,7 @@
 <h3><b><%= @skillset.name %></b></h3>
 <font size="2"> <%= @skillset.created_at.strftime("%B %d, %Y") %></font><br><br>
 <div class="card-panel  blue-grey darken-1 blue-grey-text text-lighten-5">
-<h5>Genre: <%= @skillset.skills %></h2><br>
+<h5>Skills: <%= @skillset.skills %></h2><br>
 <font size="3">More info: <%= @skillset.info %></font><br><br>
 </div>
 <font size="3">Created by user: <%= @skillset.user.get_email %></font><br>

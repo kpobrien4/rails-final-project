@@ -6,6 +6,7 @@
       <%end%>
 </ul>
 <%= form_for [user, project] do |f| %>
+<%= f.hidden_field :user_id, value: user.id %>
     <div class="input-field">
       <%= f.text_field :title %>
       <%= f.label :title %>

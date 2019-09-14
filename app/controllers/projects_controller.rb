@@ -26,6 +26,7 @@ class ProjectsController < ApplicationController
   end
 
   def edit
+    redirect_to projects_path unless current_user == @user
   end
 
   def update
@@ -55,4 +56,5 @@ class ProjectsController < ApplicationController
     def project_params
       params.require(:project).permit(:title, :genre, :info, :contact, :user_id)
     end
+
 end

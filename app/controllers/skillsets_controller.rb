@@ -4,7 +4,7 @@ class SkillsetsController < ApplicationController
     before_action :set_skillset, except: [:index, :new, :create]
   
     def index
-      @skillsets = Skillset.search(params[:query])
+      @skillsets = Skillset.search(params[:query], params[:user_id])
     end
   
     def new
