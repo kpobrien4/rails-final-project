@@ -12,6 +12,7 @@ class UsersController < ApplicationController
         session[:user_id] = @user.id
         redirect_to user_projects_path(@user)
       else
+        flash[:notify] = @user.errors.full_messages
         render :new
       end
     end

@@ -14,8 +14,8 @@ class ProjectsController < ApplicationController
   def create
     @project = @user.projects.build(project_params)
     if @project.save
-      flash[:notify] = "Project successfully created"
       redirect_to projects_path
+      flash[:notify] = "Project successfully created"
     else
       flash[:notify] = @project.errors.full_messages
       render :new
@@ -33,6 +33,7 @@ class ProjectsController < ApplicationController
     if @project.update(project_params)
       redirect_to project_path(@project)
     else
+      flash[:notify] = @project.errors.full_messages
       render :edit
     end
   end
@@ -40,6 +41,8 @@ class ProjectsController < ApplicationController
   def destroy
     if current_user == @project.user
     @project.destroy
+    else 
+      flash[:alert] = "You are not authorized to do that"
     end
     redirect_to projects_path
   end
