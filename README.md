@@ -1,24 +1,22 @@
-# README
+# SymbioSound
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This web app was designed as a creative hub and collaborative network for artists to get paid for their skills, and also receive services based on their musical needs.
 
-Things you may want to cover:
 
-* Ruby version
+## Usage
 
-* System dependencies
+Run rails s to access the website in your local server.
 
-* Configuration
 
-* Database creation
+## Contributing
 
-* Database initialization
+Bug reports and pull requests are welcome on GitHub at https://github.com/kpobrien4/sinatra-portfolio-project.
 
-* How to run the test suite
+##Author
+Kevin O'Brien
 
-* Services (job queues, cache servers, search engines, etc.)
+##Acknowledgements
+Enoch Griffith
 
-* Deployment instructions
-
-* ...
+##License
+The gem is available as open source under the terms of the MIT License - see the LICENSE.md file for details
