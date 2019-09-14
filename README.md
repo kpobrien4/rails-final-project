@@ -10,7 +10,7 @@ Run rails s to access the website in your local server.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/kpobrien4/sinatra-portfolio-project.
+Bug reports and pull requests are welcome on GitHub at https://github.com/kpobrien4/rails-final-project.
 
 ##Author
 Kevin O'Brien
