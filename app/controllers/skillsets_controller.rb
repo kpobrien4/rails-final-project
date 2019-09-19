@@ -15,7 +15,6 @@ class SkillsetsController < ApplicationController
       @skillset = @user.skillsets.build(skillset_params)
       if @skillset.save
         redirect_to skillsets_path
-        flash[:notify] = "Skillset successfully created"
       else
         flash[:notify] = @skillset.errors.full_messages
         render :new

@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2019_09_14_160604) do
     t.integer "skillset_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "quantity"
+    t.integer "skillset_rating"
   end
 
   create_table "projects", force: :cascade do |t|
