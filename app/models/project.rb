@@ -9,4 +9,5 @@ class Project < ApplicationRecord
     validates :contact, presence: true
 
     scope :search, -> (query) { query ? Project.where("title LIKE ?", "%#{query}%") : Project.all }
+    scope :featured_projects, -> {Project.last(3).collect {|project| "#{project.title}, Genre: #{project.genre}"}.join(" <br> ").html_safe}
 end
