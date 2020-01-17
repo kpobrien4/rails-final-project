@@ -1,13 +1,13 @@
 <nav class="blue-grey lighten-2">
   <div class="container">
-    <%= link_to "SymbioSound", root_path, class: "brand-logo" %>
+    <%= link_to "SymbioSound", root_path, class: "brand-logo thin" %>
     <ul class="right">
       <% if is_logged_in? %>
-        <li><%= link_to "Project List", projects_path %></li>
-        <li><%= link_to "New Project", new_user_project_path(current_user) %></li>
-        <li><%= link_to "Skillset List", skillsets_path %></li>
-        <li><%= link_to "New Skillset", new_user_skillset_path(current_user) %></li>
-        <li><%= link_to "Logout", delete_user_session_path, method: 'delete' 
+        <li class="thin"><%= link_to "Project List", projects_path %></li>
+        <li class="thin"><%= link_to "New Project", new_user_project_path(current_user) %></li>
+        <li class="thin"><%= link_to "Skillset List", skillsets_path %></li>
+        <li class="thin"><%= link_to "New Skillset", new_user_skillset_path(current_user) %></li>
+        <li class="thin"><%= link_to "Logout", delete_user_session_path, method: 'delete' 
         %></li>
       <% end %>
     </ul>
