@@ -12,11 +12,11 @@ Run rails s to access the website in your local server.
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/kpobrien4/rails-final-project.
 
-##Author
+## Author
 Kevin O'Brien
 
-##Acknowledgements
+## Acknowledgements
 Enoch Griffith
 
-##License
+## License
 The gem is available as open source under the terms of the MIT License - see the LICENSE.md file for details
