@@ -1,3 +1,4 @@
+@media screen and (min-width:800px){
  .epic {
     width: 100vw;
     height: 100vh;
@@ -5,13 +6,23 @@
     background-repeat: no-repeat;
     background-size: cover;
     }
+  }
 
 
 
-@media screen and (max-width:800px) {
-  body {
+@media all and (max-width:800px) {
+  .epic {
+    background-image:url("mobilbg.png");
     background-size: cover;
     background-position: center center;
+}
+
+@media all and (max-width:800px){
+  .rad{
+    text{
+      font-size: 150%
+    }
+  }
 }
 
 }
