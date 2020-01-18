@@ -5,6 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-(0..50).each.with_index(1) do |num|
-    Project.create(title: "Title #{num}" , info: "Info #{num}.")
-  end
+
+    User.create(email: "email@email.gov" , password: "fwefewf")
