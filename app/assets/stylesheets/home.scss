@@ -24,12 +24,25 @@
     background-size: cover;
     }
 
-    body {
+
+@media screen and (max-width:800px) {
+  body {
+    background-size: cover;
+    background-position: center center;
+    height: 50%;
+    background-attachment:fixed }
+
+    
+}
+
+
+
+    .stickier {
       display: flex;
-      min-height: 100vh;
+      min-height: 85vh;
       flex-direction: column;
     }
   
-    main {
+    .sticky {
       flex: 1 0 auto;
     }
