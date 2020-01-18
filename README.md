@@ -15,8 +15,5 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/kpobri
 ## Author
 Kevin O'Brien
 
-## Acknowledgements
-Enoch Griffith
-
 ## License
 The gem is available as open source under the terms of the MIT License - see the LICENSE.md file for details
