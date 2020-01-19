@@ -11,7 +11,7 @@ class Skillset < ApplicationRecord
     def self.search(query, user_id)
         if user_id
             user = User.find_by_id(user_id)
-            query ? user.skillsets.where("skills LIKE ?", "%#{query}%") : user.skillsets 
+            query ? user.skillsets.where("LOWER(skills) LIKE ?", "%#{query.downcase}%") : user.skillsets 
         else
             query ? Skillset.where("skills LIKE ?", "%#{query}%") : Skillset.all
         end

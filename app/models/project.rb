@@ -8,6 +8,6 @@ class Project < ApplicationRecord
     validates :info, presence: true
     validates :contact, presence: true
 
-    scope :search, -> (query) { query ? Project.where("title LIKE ?", "%#{query}%") : Project.all }
+    scope :search, -> (query) { query ? Project.where("LOWER(title) LIKE ?", "%#{query.downcase}%") : Project.all }
     scope :featured_projects, -> {Project.last(2).collect {|project| "#{project.title}, Genre: #{project.genre}"}.join(" <br> ").html_safe}
 end
