@@ -1,10 +1,12 @@
-<h1 class="center thin">List of Projects</h1>
+<h5 class="center thin">Hitting a deadend on a promising song?</h5>
+<h5 class="center thin">Looking to start a band?</h5>
+<h5 class="center thin">Interested in collaborating with someone new?</h5>
+<h3 class="center thin">Check out our list of projects</h3>
 <%= form_tag user_projects_path(current_user), method: "get" do %>
     <%= text_field_tag :query.downcase %>
     <%= submit_tag :search, class: "btn red lighten-2" %>
   <% end %>
-  
-  <table>
+  <table class="thin table" align="center">
     <thead>
       <tr>
         <th>Title</th>

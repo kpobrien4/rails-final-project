@@ -1,11 +1,11 @@
-<h3><b><%= @project.title %></b></h3>
-<font size="2"> <%= @project.created_at.strftime("%B %d, %Y") %></font><br><br>
-<div class="card-panel  blue-grey darken-1 blue-grey-text text-lighten-5">
-<h5>Genre: <%= @project.genre %></h2><br>
-<font size="3">More info: <%= @project.info %></font><br><br>
+<h3 class="thin"><%= @project.title %></h3>
+<font size="2" class="thin"> <%= @project.created_at.strftime("%B %d, %Y") %></font><br><br>
+<div class="card-panel  ">
+<h5 class="thin">Genre: <%= @project.genre %></h2><br>
+<font size="3" class="thin">More info: <%= @project.info %></font><br><br>
 </div>
-<font size="3">Created by user: <%= link_to @project.user.get_email, user_skillsets_path(@project.user_id) %></font><br>
-<font size="3">Contact: <%= @project.contact %></font><br><br><br>
+<font size="3" class="thin">Created by user: <%= link_to @project.user.get_email, user_skillsets_path(@project.user_id) %></font><br>
+<font size="3" class="thin">Contact: <%= @project.contact %></font><br><br><br>
 <% unless current_user == @project.user %>
 <%= form_tag user_skillsets_path(current_user), method: "get" do %>
     <%= submit_tag "Pair a Skillset", class: "btn blue-grey darken-1" %>
