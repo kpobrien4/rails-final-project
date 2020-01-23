@@ -1,8 +1,8 @@
-<h3><b><%= @skillset.name %></b></h3>
-<font size="2"> <%= @skillset.created_at.strftime("%B %d, %Y") %></font><br><br>
-<div class="card-panel  blue-grey darken-1 blue-grey-text text-lighten-5">
-<h5>Skills: <%= @skillset.skills %></h2><br>
-<font size="3">More info: <%= @skillset.info %></font><br><br>
+<h3 class="thin"><%= @skillset.name %></h3>
+<font size="2" class="thin"> <%= @skillset.created_at.strftime("%B %d, %Y") %></font><br><br>
+<div class="card-panel text-lighten-5">
+<h5 class="thin">Skills: <%= @skillset.skills %></h2><br>
+<font size="3" class="thin">More info: <%= @skillset.info %></font><br><br>
 </div>
-<font size="3">Created by user: <%= @skillset.user.get_email %></font><br>
-<font size="3">Contact: <%= @skillset.contact %></font><br>
+<font size="3" class="thin">Created by user: <%= @skillset.user.get_email %></font><br>
+<font size="3" class="thin">Contact: <%= @skillset.contact %></font><br>
